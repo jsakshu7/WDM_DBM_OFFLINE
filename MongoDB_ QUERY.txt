@@ -1,0 +1,47 @@
+--- MONGODB QUERRY
+
+1. show dbs -- show all database
+
+2. use <db name> -- enter in the database or create new and enter if not exists.
+
+3. db.dropDatabase() -- Delete the current database
+
+Commands Related to collection
+
+4. show collections -- show all the collections inside the current database
+
+5. db.createCollections(<name>) -- Create a collection
+
+6. db.<collection_name>.drop() -- delete the collection from the current database.
+
+Commands related to documents
+
+7. db.<collection_name>.insertOne({'name':'nisarg','member':'youtube'}) -- Create a document inside a collection.
+
+8. db.<collection_name>.insertMany([{},{}]) -- create multiple documents  
+
+9. db.<collection_name>.find() -- Find all the documents inside a collection
+
+10. db.<collection_name>.find({'name':'nisarg}) -- Find all the documents which has name nisarg.
+
+11. db.<collection_name>.find({'sal':{$lte:15}}) -- Find all the documents where sal <= 15
+12. db.<collection_name>.find({'sal':{$gte:15}}) -- Find all the documents where sal >= 15
+
+13. db.<collection_name>.find().sort({<some_numerical_variable>:1}) -- Sort and show all the documents in 
+ascending order according to some numerical variable.
+
+14. db.<collection_name>.find().sort({<some_numerical_variable>:-1}) -- Sort and show all the documents in descending 
+order according to some numerical variable.
+
+15. db.<collection_name>.updateOne({'name':'nisarg'},{$set:{'organization':'rubixe'}}) -- find all the documents with
+name nisarg and update the very first document with organization = 'rubixe'.
+
+16. db.<collection_name>.updateMany({'name':'nisarg'},{$set:{'organization':'rubixe'}}) -- find all the documents with
+name nisarg and update every document with organization = 'rubixe'.
+
+17. db.my_first_collection.deleteOne({'name':'nisarg'}) --  delete the very first document having the value nisarg 
+in the name field
+
+18. db.my_first_collection.deleteMany({'name':'nisarg'}) --  delete the all documents having the value nisarg 
+in the name field.
+
